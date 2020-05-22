@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,300;1,400&display=swap');
+
+/* Base Styles -------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fafafa; 
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.my-form {
+    max-width: 800px;
+    margin: auto;
+}
+
+.main-header {
+    background-color: #2d3945;
+    color: #fafafa;
+    padding: 13px;
+    text-align: center;
+}
+
+.main-header h1 {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+.banner {
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    border-bottom: solid 5px;
+    text-align: center;
+}
+
+.headline {
+    margin: 0;
+    font-size: 1.4em;    
+}
+
+.subtitle {
+    margin: 0;
+}
+
+.subtitle {
+    margin: auto;
+    padding-top: 10px;
+    color: #cacdd1;
+    font: 18px;    
+    text-align: center;
+}
+
+.contacts_container {
+    margin-top: 3px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    border-top: solid 2px;
+    border-bottom: solid 2px;    
+}
+
+.form-box {
+    display: flex; 
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+legend {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+label {
+    width: 200px;
+    margin-bottom: 10px;
+    color: gray;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 15px;
+    width: 100%;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+}
+
+input[id="zip_code"] {
+    margin-bottom: initial;
+}
+
+input[type=text], #topics {
+    background: #eff0f1;
+    transition: all .3s ease-in-out;    
+}
+
+input:focus, #topics:focus {
+    border: solid .5px #46698b;     
+    background: white;     
+}
+
+::placeholder {
+    color: silver;
+    font-style: italic;
+    font-size: .9em;
+    text-align: right;
+}
+
+select {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    font-size: 16px;
+    height: 48px;
+    margin: 0;
+    outline: 0;
+    padding: 15px;
+    width: 100%;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+}
+
+.news_letter_container {
+    background: rgb(209, 231, 238);
+    padding-top: 35px;
+}
+
+.news_letter_container .labels {
+    margin-bottom: 15px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 0 4px 15px 0;
+}
+
+input[type=checkbox] + label,
+input[type=radio] + label {
+    margin-left: 5px;
+}
+
+button {
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    background-color: #4ebbb5;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #4ebbb5;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    margin-bottom: 10px;
+}
+
+#topics {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 100px;    
+    outline: 0;
+    resize: none;    
+    padding: 15px;
+    width: 100%;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.light {
+    font-weight: 300;
+}
+
+footer {
+    padding-bottom: 200px;
+    text-align: center;
+}
+
+footer p {
+    color: silver;
+    font-style: italic;
+}
+
+/* Media Queries -------------------------------- */
+
+@media (max-width: 320px) {
+    .form-box {
+        flex-direction: column;
+    }
+
+    input[id="zip_code"] {
+        width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .form-box {
+        flex-direction: row;
+    }
+
+    label {
+        flex-basis: 200px ;
+    }
+}
