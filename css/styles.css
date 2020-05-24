@@ -69,6 +69,7 @@ body {
 
 .form-box {
     display: flex; 
+    flex-direction: column;
 }
 
 fieldset {
@@ -86,6 +87,7 @@ label {
     width: 200px;
     margin-bottom: 10px;
     color: gray;
+    margin-bottom: 15px;
 }
 
 input[type="text"],
@@ -108,9 +110,13 @@ input[type="email"] {
 
 input[id="zip_code"] {
     margin-bottom: initial;
+    width: 50%;
 }
 
-input[type=text], #topics {
+input[type=text],
+input[type="tel"],
+input[type="email"],
+#topics {
     background: #eff0f1;
     transition: all .3s ease-in-out;    
 }
@@ -209,22 +215,21 @@ footer p {
 
 /* Media Queries -------------------------------- */
 
-@media (max-width: 320px) {
-    .form-box {
-        flex-direction: column;
-    }
-
-    input[id="zip_code"] {
-        width: 50%;
-    }
-}
 
 @media (min-width: 768px) {
     .form-box {
-        flex-direction: row;
+        flex-direction: row; 
     }
 
     label {
-        flex-basis: 200px ;
+        flex-basis: 200px;           
+    }
+
+    label {
+        margin-top: 15px;
+    }
+
+    input[id="zip_code"] {
+        width: 100%;
     }
 }
